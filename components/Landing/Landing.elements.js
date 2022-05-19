@@ -7,6 +7,12 @@ export const MainWrapper = styled.div`
   background-color: ${({ bgColor }) => (bgColor ? bgColor : "#fff")};
   padding: 2rem 0;
   margin-top: 36px;
+  box-shadow: ${({ hasShadow }) =>
+    hasShadow ? "0px 5px 5px 0px rgba(0, 0, 0, 0.3)" : "none"};
+
+  @media screen and (max-width: 960px) {
+    margin-top: 0;
+  }
 `;
 
 export const LandingMain = styled.main`

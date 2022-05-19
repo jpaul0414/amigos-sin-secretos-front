@@ -96,4 +96,8 @@ export const LoginButton = styled.button`
     color: #0070b8;
     transition: all 0.5s ease;
   }
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 20px;
+  }
 `;

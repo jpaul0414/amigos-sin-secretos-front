@@ -22,9 +22,10 @@ const Landing = ({
   imageHeight,
   bgColor,
   orderInLine,
+  hasShadow,
 }) => {
   return (
-    <MainWrapper bgColor={bgColor}>
+    <MainWrapper bgColor={bgColor} hasShadow={hasShadow}>
       <LandingMain>
         <LandingTextContainer orderInLine={orderInLine}>
           <LandingTitle>{titleText}</LandingTitle>
