@@ -1,6 +1,7 @@
 import React from "react";
 import Landing from "../components/Landing/Landing";
 import Head from "next/head";
+import ChatSection from "../components/ChatSection/ChatSection";
 
 const consejero = () => {
   return (
@@ -22,6 +23,7 @@ const consejero = () => {
         bgColor={"#FFB341"}
         hasShadow={true}
       ></Landing>
+      <ChatSection></ChatSection>
     </>
   );
 };

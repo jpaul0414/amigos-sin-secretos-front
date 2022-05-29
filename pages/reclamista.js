@@ -1,6 +1,7 @@
 import React from "react";
 import Landing from "../components/Landing/Landing";
 import Head from "next/head";
+import EvaluationForm from "../components/EvaluationForm/EvaluationForm";
 
 const reclamista = () => {
   return (
@@ -23,6 +24,7 @@ const reclamista = () => {
         orderInLine={1}
         hasShadow={true}
       ></Landing>
+      <EvaluationForm></EvaluationForm>
     </>
   );
 };

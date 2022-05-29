@@ -1,6 +1,7 @@
 import React from "react";
 import Landing from "../components/Landing/Landing";
 import Head from "next/head";
+import HelpForm from "../components/HelpForm/HelpForm";
 
 const prestamista = () => {
   return (
@@ -23,6 +24,7 @@ const prestamista = () => {
         orderInLine={1}
         hasShadow={true}
       ></Landing>
+      <HelpForm></HelpForm>
     </>
   );
 };
