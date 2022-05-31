@@ -7,6 +7,7 @@ export default function Home() {
       <Head>
         <title>Inicio | Amigos sin Secretos</title>
         <meta name="description" content="Amigos sin secretos"></meta>
+        <meta name="theme-color" content="#0070B8"></meta>
       </Head>
       <Landing
         titleText={"Un espacio para dejar tus problemas"}

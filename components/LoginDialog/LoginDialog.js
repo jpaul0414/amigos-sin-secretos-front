@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
+import useAuth from "../../hooks/useAuth/useAuth";
 import { Dialog } from "evergreen-ui";
-import { AuthContext } from "../../contexts/Auth/AuthContext";
+import AuthContext from "../../contexts/Auth/AuthContext";
 import Image from "next/image";
 import {
   CheckboxLabel,
@@ -14,6 +15,17 @@ import {
 
 const LoginDialog = () => {
   const { showLogin, setShowLogin } = useContext(AuthContext);
+  const { login } = useAuth();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    login({
+      identifier: e.target.identifier.value,
+      password: e.target.password.value,
+      remember: e.target.remember.checked,
+    });
+  };
 
   return (
     <Dialog
@@ -35,19 +47,34 @@ const LoginDialog = () => {
         width: "600px",
       }}
     >
-      <LoginWrapper>
+      <LoginWrapper onSubmit={handleLogin}>
         <LoginTitle>Inicia Sesión</LoginTitle>
         <FormTitle>Tu cuenta</FormTitle>
-        <Input type={"text"} placeholder={"Usuario"}></Input>
-        <Input type={"password"} placeholder={"Contraseña"}></Input>
+        <Input
+          type={"text"}
+          placeholder={"Usuario"}
+          name={"identifier"}
+          id={"identifier"}
+          autoComplete={"username"}
+          required={true}
+        ></Input>
+        <Input
+          type={"password"}
+          placeholder={"Contraseña"}
+          name={"password"}
+          id={"password"}
+          autoComplete={"current-password"}
+          required={true}
+        ></Input>
         <CheckboxLabel htmlFor="Recordar">
-          <InputCheckbox type={"checkbox"} id={"Recordar"} />
+          <InputCheckbox type={"checkbox"} name={"remember"} id={"remember"} />
           Recuérdame
         </CheckboxLabel>
         <LoginButton
-          onClick={() => {
-            setShowLogin(!showLogin);
-          }}
+          type={"submit"}
+          // onClick={() => {
+          //   setShowLogin(!showLogin);
+          // }}
         >
           Iniciar sesión
         </LoginButton>

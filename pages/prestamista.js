@@ -9,6 +9,7 @@ const prestamista = () => {
       <Head>
         <title>Amigo Prestamista</title>
         <meta name="description" content="Página amigo prestamista"></meta>
+        <meta name="theme-color" content="#0070B8"></meta>
       </Head>
       <Landing
         titleText={"Una ayuda de peso"}

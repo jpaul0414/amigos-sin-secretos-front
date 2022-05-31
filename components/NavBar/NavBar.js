@@ -12,11 +12,11 @@ import {
   Nav,
   NavBarContainer,
 } from "./NavBar.elements";
-import { AuthContext } from "../../contexts/Auth/AuthContext";
+import AuthContext from "../../contexts/Auth/AuthContext";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { showLogin, setShowLogin } = useContext(AuthContext);
+  const { showLogin, setShowLogin, isAuthenticated } = useContext(AuthContext);
 
   const handleClick = () => {
     if (window.innerWidth < 960) {
@@ -56,13 +56,15 @@ const NavBar = () => {
             <MenuItem>
               <Link href={"/reclamista"}>Amigo Reclamista</Link>
             </MenuItem>
-            <AuthButton
-              onClick={() => {
-                setShowLogin(!showLogin);
-              }}
-            >
-              Iniciar Sesión
-            </AuthButton>
+            {!isAuthenticated && (
+              <AuthButton
+                onClick={() => {
+                  setShowLogin(!showLogin);
+                }}
+              >
+                Iniciar Sesión
+              </AuthButton>
+            )}
           </Menu>
         </MenuWrapper>
       </NavBarContainer>

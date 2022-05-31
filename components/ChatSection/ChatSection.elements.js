@@ -69,10 +69,13 @@ export const HeaderTitle = styled.p`
 
 export const ChatBody = styled.div`
   width: 100%;
-  height: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: #d5d7dd;
+  margin: 2rem 0;
+  border-radius: 10px;
 `;
 
 export const ChatFooter = styled.div`
@@ -90,6 +93,7 @@ export const ChatInput = styled.input`
   outline: none;
   padding: 0 1rem;
   font-size: 1.5rem;
+  border-radius: 20px;
 
   &::placeholder {
     font-size: 1.5rem;
@@ -107,6 +111,10 @@ export const ChatInput = styled.input`
       width: 75%;
     }
   }
+
+  &:focus {
+    outline: #d5d7dd solid 1px;
+  }
 `;
 
 export const ChatButton = styled.button`
@@ -118,6 +126,10 @@ export const ChatButton = styled.button`
   cursor: pointer;
   font-size: 2rem;
   color: #7c7c7c;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media screen and (max-width: 960px) {
     font-size: 1.5rem;
@@ -126,5 +138,9 @@ export const ChatButton = styled.button`
   @media screen and (max-width: 480px) {
     font-size: 1rem;
     width: 20%;
+  }
+
+  &:hover {
+    background-color: #d5d7dd;
   }
 `;

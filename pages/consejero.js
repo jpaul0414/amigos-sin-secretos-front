@@ -9,6 +9,7 @@ const consejero = () => {
       <Head>
         <title>Amigo consejero</title>
         <meta name="description" content="Página amigo consejero"></meta>
+        <meta name="theme-color" content="#0070B8"></meta>
       </Head>
       <Landing
         titleText={"Hablemos sin presiones"}

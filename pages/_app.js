@@ -1,6 +1,6 @@
 import LoginDialog from "../components/LoginDialog/LoginDialog";
 import NavBar from "../components/NavBar/NavBar";
-import AuthContextProvider from "../contexts/Auth/AuthContext";
+import { AuthContextProvider } from "../contexts/Auth/AuthContext";
 import "../styles/globals.css";
 import { GlobalStyles } from "../styles/globalStyles";
 

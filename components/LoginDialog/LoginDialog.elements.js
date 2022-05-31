@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const LoginWrapper = styled.div`
+export const LoginWrapper = styled.form`
   width: 100%;
   display: flex;
   flex-direction: column;
