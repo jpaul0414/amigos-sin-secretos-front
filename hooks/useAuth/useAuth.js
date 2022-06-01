@@ -27,7 +27,7 @@ const useAuth = () => {
           setShowLogin(false);
         })
         .catch((err) => {
-          console.log("error on hook", err.message);
+          console.log(err.message);
         });
     },
     [setJwt, setUser]

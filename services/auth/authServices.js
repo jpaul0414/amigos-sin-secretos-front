@@ -4,7 +4,6 @@ import Cookies from "js-cookie";
 export const login = async ({ identifier, password, remember }) => {
   try {
     const res = await axiosClient.post("/auth/local", { identifier, password });
-    console.log(res);
 
     if (remember) {
       Cookies.set(
